@@ -1,104 +1,77 @@
-<!DOCTYPE html>
-<html lang="ar">
+<!DOCTYPE html> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقعي الشخصي</title>
-    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Use defer to ensure the script loads after the DOM -->
 </head>
 <body>
-    <!-- قائمة التنقل -->
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">من أنا</a></li>
-                <li><a href="#projects">مشاريعي</a></li>
-                <li><a href="#contact">التواصل</a></li>
+                <li><a href="#home" class="en">Home</a></li>
+                <li><a href="#about" class="en">About</a></li>
+                <li><a href="#projects" class="en">Projects</a></li>
+                <li><a href="#contact" class="en">Contact</a></li>
+                <li><a href="#home" class="ar">الرئيسية</a></li>
+                <li><a href="#about" class="ar">من أنا</a></li>
+                <li><a href="#projects" class="ar">المشاريع</a></li>
+                <li><a href="#contact" class="ar">اتصل بي</a></li>
             </ul>
         </nav>
+        <div class="language-toggle">
+            <button id="languageButton" class="right">العربية</button> <!-- Button to toggle languages -->
+        </div>
     </header>
 
-    <!-- القسم الرئيسي -->
+    <!-- Home Section -->
     <section id="home">
-        <h1>مرحبًا، أنا مينا ناصر</h1>
-        <p>مصمم ومطور مواقع إلكترونية ذو خبرة في هذا المجال.</p>
-        <a href="#contact" class="button">تواصل معي</a>
+        <h1>Welcome to My Portfolio</h1>
+        <p class="en">This is the English version of my portfolio.</p>
+        <p class="ar" style="display: none;">هذه النسخة العربية من محفظتي.</p>
+        <a href="#about" class="button">Learn More</a>
     </section>
 
-    <!-- قسم "من أنا" -->
+    <!-- About Section -->
     <section id="about">
-        <h2>من أنا</h2>
-        <p>أهمية نجاح شركتك تبدأ بموقع إلكتروني احترافي وجذاب. إذا كنت تبحث عن مطور مواقع يمكنه تحويل رؤيتك إلى واقع، ومساعدتك على تحقيق الريادة لشركتك في مجالك، فأنت في المكان المناسب.</p>
-        
-        <h3>المؤهلات العلمية:</h3>
+        <h2>About Me</h2>
+        <img src="my-image.jpg" alt="My Profile" class="profile-photo">
+        <p class="en">I am a web developer...</p>
+        <p class="ar" style="display: none;">أنا مطور ويب...</p>
         <ul>
-            <li>بكالوريوس في الحاسبات والمعلومات</li>
-            <li>دبلوم في التدريب الاحترافي في هندسة البرمجيات من معهد تكنولوجيا المعلومات (ITI)</li>
-            <li>دورات تدريبية متخصصة من منصات تعليمية مرموقة: Udemy، Coursera، مهارة تك</li>
+            <li class="en">Skills: HTML, CSS, JavaScript</li>
+            <li class="ar" style="display: none;">المهارات: HTML، CSS، JavaScript</li>
         </ul>
-
-        <h3>الخدمات المقدمة على منصة مستقل:</h3>
-        <ul>
-            <li>تصميم وتطوير مواقع إلكترونية شاملة تتميز بالسرعة والأمان لحماية بياناتك.</li>
-            <li>تصميم صفحة هبوط (Landing Page) تجذب الزوار وتحقق أهدافك التسويقية.</li>
-            <li>تطوير صفحات تسجيل الدخول والتسجيل (Login & SignUp) بشكل احترافي.</li>
-            <li>تحسين تجربة المستخدم لجعل موقعك سهل التصفح والاستخدام.</li>
-        </ul>
-
-        <h3>المهارات وإطارات العمل:</h3>
-        <ul>
-            <li>تقنيات الويب الأساسية: HTML، CSS، JS</li>
-            <li>التطوير الخلفي وقواعد البيانات: PHP، SQL</li>
-        </ul>
-
-        <h3>ما يميزني:</h3>
-        <ul>
-            <li>سرعة الاستجابة والتواصل الفعّال</li>
-            <li>القدرة على تنفيذ التعديلات المطلوبة</li>
-            <li>كتابة كود نظيف ومنظم</li>
-            <li>إتقان اللغة الإنجليزية</li>
-        </ul>
-
-        <p>يسعدني العمل معك على مشروعك، تواصل معي لتحقيق رؤيتك. لا تتردد في مراسلتي!</p>
     </section>
 
-    <!-- قسم "المشاريع" -->
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>مشاريعي</h2>
-
-        <!-- مشروع 1 -->
+        <h2>My Projects</h2>
         <div class="project-card">
-            <h3>موقع متجر إلكتروني</h3>
-            <p>متجر إلكتروني لبيع المنتجات التقنية مع واجهة تفاعلية وتصميم متجاوب يعمل على جميع الأجهزة.</p>
-            <p><strong>التقنيات المستخدمة:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>رابط المشروع:</strong> <a href="#">عرض المشروع</a></p>
+            <h3>Project 1</h3>
+            <p class="en">Description of project 1.</p>
+            <p class="ar" style="display: none;">وصف المشروع 1.</p>
         </div>
-
-        <!-- مشروع 2 -->
         <div class="project-card">
-            <h3>تطبيق لإدارة المهام</h3>
-            <p>تطبيق ويب يسمح للمستخدمين بإدارة مهامهم اليومية، بإمكانية إضافة وتعديل وحذف المهام وتحديد الأولويات.</p>
-            <p><strong>التقنيات المستخدمة:</strong> HTML, CSS, JavaScript, Local Storage</p>
-            <p><strong>رابط المشروع:</strong> <a href="#">عرض المشروع</a></p>
+            <h3>Project 2</h3>
+            <p class="en">Description of project 2.</p>
+            <p class="ar" style="display: none;">وصف المشروع 2.</p>
         </div>
-
-        <!-- مشروع 3 -->
         <div class="project-card">
-            <h3>موقع تعليمي للغة الإنجليزية</h3>
-            <p>موقع ويب تفاعلي يحتوي على دروس وقواعد اللغة الإنجليزية مع اختبارات تقييمية وتطبيقات عملية.</p>
-            <p><strong>التقنيات المستخدمة:</strong> HTML, CSS, JavaScript</p>
-            <p><strong>رابط المشروع:</strong> <a href="#">عرض المشروع</a></p>
+            <h3>Project 2</h3>
+            <p class="en">Description of project 3.</p>
+            <p class="ar" style="display: none;">وصف المشروع 3.</p>
         </div>
-
     </section>
 
-    <!-- قسم "التواصل" -->
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>التواصل</h2>
-        <p>تواصل معي عبر البريد الإلكتروني أو عبر وسائل التواصل الاجتماعي:</p>
-        <p>البريد الإلكتروني: example@example.com</p>
-        <p>روابط وسائل التواصل الاجتماعي</p>
+        <h2>Contact Me</h2>
+        <p class="en">You can reach me via email. : minanasser82018@gmail.com</p>
+        <p class="ar" style="display: none;">  minanasser82018@gmail.com :يمكنك الاتصال بي عبر البريد الإلكتروني.</p>
     </section>
 </body>
 </html>
